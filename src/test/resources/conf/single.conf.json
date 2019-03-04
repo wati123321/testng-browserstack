@@ -2,13 +2,17 @@
   "server": "hub-cloud.browserstack.com",
   "user": "BROWSERSTACK_USERNAME",
   "key": "BROWSERSTACK_ACCESS_KEY",
-
   "capabilities": {
-    "build": "testng-browserstack",
-    "name": "single_test",
-    "browserstack.debug": true
+    "browserstack.use_w3c": true,
+    "bstack:options": {
+      "os": "Windows",
+      "osVersion": "7",
+      "sessionName": "single_test",
+      "buildName": "testng-browserstack",
+      "projectName": "My Awesome App",
+      "debug": true
+    }
   },
-
   "environments": {
     "chrome": {
       "browser": "chrome"
